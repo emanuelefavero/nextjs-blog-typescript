@@ -5,6 +5,8 @@ import Date from '@/components/Date'
 
 import { getAllPostIds, getPostData } from '@/lib/posts'
 
+import { GetStaticPaths, GetStaticProps } from 'next'
+
 // -< Post >--------------------------------
 export default function Post({ postData }) {
   return (
@@ -37,7 +39,7 @@ export default function Post({ postData }) {
 }
 
 // * -< Fetch Data >-------------------------------
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getAllPostIds()
 
   return {
@@ -46,7 +48,11 @@ export async function getStaticPaths() {
   }
 }
 
-export async function getStaticProps({ params }) {
+export const getStaticProps: GetStaticProps = async ({
+  params,
+}: {
+  params: { id: string }
+}) => {
   const postData = await getPostData(params.id)
 
   return {

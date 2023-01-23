@@ -1,6 +1,6 @@
 const { server } = require('@/config/server')
 
-export default function hello({ data }) {
+export default function hello({ data }: { data: { text: string } }) {
   return <h1 className='text-indigo-500'>{data.text}</h1>
 }
 
