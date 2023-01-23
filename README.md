@@ -6,7 +6,7 @@ A simple blog built with NextJS and Typescript to show its features
 
 ## Demo
 
-[https://nextjs-blog-g2nx.vercel.app/](https://nextjs-blog-g2nx.vercel.app/)
+[https://nextjs-blog-typescript-rho.vercel.app/](https://nextjs-blog-typescript-rho.vercel.app/)
 
 #### Screenshot
 
