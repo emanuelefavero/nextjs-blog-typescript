@@ -21,95 +21,33 @@ A simple blog built with NextJS and Typescript to show its features
 
 ## **Typescript in NextJS**
 
-> Learn more about [Typescript in NextJS](https://nextjs.org/docs/basic-features/typescript)
-
-### **Create a new NextJS App with TypeScript**
-
-- `npx create-next-app APP-NAME --typescript`
+- [NextJS Typescript Cheat Sheet](https://github.com/emanuelefavero/nextjs-typescript)
+- [NextJS Typescript Docs](https://nextjs.org/docs/basic-features/typescript)
 
 #### Create a new NextJS App with TypeScript and ESLint
 
 - `npx create-next-app APP-NAME --typescript --eslint`
 
-## Add Typescript to an existing NextJS App
+## Features
 
-Create a `tsconfig.json` file in the root of the project (`touch tsconfig.json`)
+- Use markdown files to create blog posts
+- Parse markdown files using `gray-matter` and `remark`
+- Display blog posts on home page and on their own page
+- Sort blog posts by date
+- Style blog posts using TailwindCSS and Sass
 
-> NextJS will automatically detect and configure this file for you after you run `npm run dev` or `npm run build`
+## Technologies used in this project
 
-Alternatively, you can:
-
-- `npm install --save-dev typescript @types/react @types/node`
-
-## **The @ alias**
-
-- Remember to add the @ alias for the root folder in `jsconfig.json`
-
-```json
-{
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      // Use @ as an alias for the root directory
-      "@/*": ["./*"]
-    }
-  }
-}
-```
-
-> Remember also to rename your files from `.js` to `.ts` and `.tsx`
-
-## Typescript strict mode
-
-- Strict mode is turned off by default in NextJS, when you feel comfortable with Typescript you can turn it on by adding the following to your `tsconfig.json` file:
-
-```json
-{
-  "compilerOptions": {
-    "strict": true
-  }
-}
-```
-
-## **NextJS Typescript types**
-
-- Static Site Generation (SSG) and Server-side Rendering (SSR)
-
-```ts
-import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
-
-export const getStaticProps: GetStaticProps = async (context) => {
-  // ...
-}
-
-export const getStaticPaths: GetStaticPaths = async () => {
-  // ...
-}
-
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  // ...
-}
-```
-
-- API Routes
-
-```ts
-import type { NextApiRequest, NextApiResponse } from 'next'
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ name: 'John Doe' })
-}
-```
-
-- Custom App
-
-```ts
-import type { AppProps } from 'next/app'
-
-export default function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
-```
+- [NextJS](https://nextjs.org/)
+- [**Typescript**](https://www.typescriptlang.org/)
+- [React](https://reactjs.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Sass](https://sass-lang.com/)
+- [postcss](https://postcss.org/)
+- [autoprefixer](https://www.npmjs.com/package/autoprefixer)
+- [date-fns](https://date-fns.org/)
+- [gray-matter](https://www.npmjs.com/package/gray-matter)
+- [remark](https://www.npmjs.com/package/remark)
 
 ## License
 
